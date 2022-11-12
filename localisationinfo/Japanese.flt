@@ -1,8 +1,8 @@
-// translation template for FB Alpha
+// translation template for FinalBurn Neo
 
-version 0x029743
+version 0x100002
 
-// codepage 1252
+// codepage 932
 
 menu    100 {
         //-- "Game"
@@ -38,8 +38,8 @@ menu    100 {
     10711   15 "ネオジオのマルチスロットで遊ぶ..."
           //-- "Load Neo Geo CDZ game..."
     10713   17 "ネオジオCDZのゲームの読み込み..."
-          //-- "Select CD image (ISO/CUE)..."
-    10710   18 "CDイメージ(ISO/CUE)の選択..."
+          //-- "Select CD image (CUE/CCD)..."
+    10710   18 "CDイメージ(CUE/CCD)の選択..."
           //-- "Start Neo Geo CDZ..."
     10712   19 "ネオジオCDZで遊ぶ..."
           //-- "Exit game"
@@ -87,7 +87,7 @@ menu    100 {
               //-- "MENU_STATE_SAVE_SLOT"
         10033   45 ""
               //-- "Undo last state save"
-        10037   46 "Undo last state save"
+        10037   46 "最後の状態セーブを元に戻す"
       }
             //-- "Restore full state on load"
       10036   47 "ゲームの読み込み時に状態セーブを復元"
@@ -220,248 +220,295 @@ menu    100 {
     10728  119 ""
           //-- "&Monitor properties"
     popup  121 "モニター設定(&M)" {
-            //-- "Automatically detect aspect ratio"
-      10650  122 "アスペクト比の自動検出"
-            //-- "Normal CRT aspect ratio"
-      10190  124 "ノーマルCRT"
-            //-- "Normal LCD aspect ratio"
-      10191  125 "ノーマルLCD"
-            //-- "Widescreen CRT aspect ratio"
-      10192  126 "ワイドCRT"
-            //-- "Widescreen LCD aspect ratio"
-      10193  127 "ワイドLCD"
+            //-- "Automatically detect fullscreen resolution and aspect ratio"
+      10650  122 "フルスクリーン解像度とアスペクト比の自動検出"
+            //-- "Select aspect ratio (Horizontal)"
+      popup  124 "アスペクト比を選択する（水平）" {
+              //-- "Normal CRT aspect ratio"
+      10190  125 "ノーマルCRT"
+              //-- "Normal LCD aspect ratio"
+      10191  126 "ノーマルLCD"
+              //-- "Widescreen CRT aspect ratio"
+      10192  127 "ワイドCRT"
+              //-- "Widescreen LCD aspect ratio"
+        10193  128 "ワイドLCD"
+      }
+            //-- "Select aspect ratio (Vertical)"
+      popup  129 "アスペクト比を選択する（垂直）" {
+              //-- "Normal CRT aspect ratio (landscape)"
+        10270  130 "ノーマルCRT（横長）"
+              //-- "Normal LCD aspect ratio (landscape)"
+        10271  131 "ノーマルLCD（横長）"
+              //-- "Widescreen CRT aspect ratio (landscape)"
+        10272  132 "ワイドCRT（横長）"
+              //-- "Widescreen LCD aspect ratio (landscape)"
+        10273  133 "ワイドLCD（横長）"
+              //-- "Normal CRT aspect ratio (portrait)"
+        10274  134 ""ノーマルCRT（縦長）"
+              //-- "Normal LCD aspect ratio (portrait)"
+        10275  135 "ノーマルLCD（縦長）"
+              //-- "Widescreen CRT aspect ratio (portrait)"
+        10276  136 "ワイドCRT（縦長）"
+              //-- "Widescreen LCD aspect ratio (portrait)"
+        10277  137 "ワイドLCD（縦長）"
+      }
             //-- "Mirrored vertical alignment"
-      10194  129 "垂直方向に反転"
+      10194  139 "垂直方向に反転"
     }
           //-- "&Rotate vertically aligned games"
-    10181  131 "縦画面のゲームで画面を回転(&R)"
+    10181  141 "縦画面のゲームで画面を回転(&R)"
           //-- "Force 60Hz refresh rate"
-    10176  132 "リフレッシュレートを60Hzに固定"
+    10176  142 "リフレッシュレートを60Hzに固定"
           //-- "Enable &Triple Buffering (Fullscreen)"
-    10100  133 "トリプルバッファを有効化(フルスクリーン)(&T)"
+    10100  143 "トリプルバッファを有効化(フルスクリーン)(&T)"
           //-- "Enable VSync (Windowed)"
-    10646  134 "VSyncを有効化(ウィンドウ)"
+    10646  144 "VSyncを有効化(ウィンドウ)"
           //-- "Enable DWM Sync (Windowed)"
-    10103  135 "Win7 DWM Fixを有効化(ウィンドウ)"
+    10103  145 "Win7 DWM Fixを有効化(ウィンドウ)"
           //-- "Auto Frameskip"
-    10177  136 "自動フレームスキップ"
+    10177  146 "自動フレームスキップ"
   }
         //-- "Audio"
-  popup  137 "サウンド" {
+  popup  147 "サウンド" {
           //-- "Select &plugin"
-    popup  138 "プラグインの選択(&P)" {
+    popup  148 "プラグインの選択(&P)" {
             //-- "DirectSound"
-      10655  139 ""
+      10655  149 ""
             //-- "XAudio2"
-      10656  140 ""
+      10656  150 ""
     }
           //-- "Plugin &options"
-    10663  141 "プラグインの設定(&O)"
+    10663  151 "プラグインの設定(&O)"
           //-- "2-point 1st order sample interpolation"
-    10231  143 "2-point 1st order サンプル補間"
+    10231  153 "2-point 1st order サンプル補間"
           //-- "4-point 3rd order sample interpolation"
-    10233  144 "4-point 3rd order サンプル補間"
+    10233  154 "4-point 3rd order サンプル補間"
           //-- "Disable FM interpolation"
-    10240  146 "FM音源補間を無効化"
+    10240  156 "FM音源補間を無効化"
           //-- "4-point 3rd order FM interpolation"
-    10243  147 "4-point 3rd order FM音源補間"
+    10243  157 "4-point 3rd order FM音源補間"
           //-- "&Sound logging"
-    popup  149 "録音(&S)" {
+    popup  159 "録音(&S)" {
             //-- "Log to file..."
-      10606  150 "ファイルに録音..."
+      10606  160 "ファイルに録音..."
             //-- "Stop logging"
-      10607  151 "録音を停止"
+      10607  161 "録音を停止"
     }
           //-- "Buffer size..."
-    10200  152 "バッファサイズ..."
+    10200  162 "バッファサイズ..."
   }
         //-- "Input"
-  popup  153 "入力" {
+  popup  163 "入力" {
           //-- "Select &plugin"
-    popup  154 "プラグインの選択(&P)" {
+    popup  164 "プラグインの選択(&P)" {
             //-- "DirectInput"
-      10664  155 ""
+      10664  165 ""
     }
           //-- "&Auto-Fire Rate"
-    popup  157 "その他" {
+    popup  167 "連射速度(&A)" {
             //-- "Slow"
-      10260  158 "Slow"
+      10260  168 "Slow"
             //-- "Medium"
-      10261  159 "Medium"
+      10261  169 "Medium"
             //-- "Fast"
-      10262  160 "Fast"
+      10262  170 "Fast"
             //-- "Very Fast"
-      10263  161 "Very Fast"
+      10263  171 "Very Fast"
     }
           //-- "Map game inputs..."
-    10007  163 "キー設定..."
+    10007  173 "キー設定..."
           //-- "Set dipswitches..."
-    10009  164 "ディップスイッチ設定"
+    10009  174 "ディップスイッチ設定"
   }
         //-- "Misc"
-  popup  165 "オプション" {
+  popup  175 "その他" {
           //-- "Options"
-    popup  166 "プログラムの優先度設定" {
+    popup  176 "オプション" {
             //-- "Auto pause"
-      10300  167 "非アクティブ時に一時停止"
+      10300  177 "非アクティブ時に一時停止"
             //-- "Always process keyboard input"
-      10301  168 "キーボード入力を常時処理する"
+      10301  178 "キーボード入力を常時処理する"
             //-- "Display mode indicator"
-      10302  169 "インジケータの表示"
+      10302  179 "インジケータの表示"
             //-- "Modeless menu"
-      10303  170 "モードレスメニュー"
+      10303  180 "モードレスメニュー"
             //-- "Don\'t change Num Lock status"
-      10616  171 "NumLockキーの状態を変更しない"
+      10616  181 "NumLockキーの状態を変更しない"
             //-- "Create support folders at runtime"
-      10719  172 "Create support folders at runtime"
-            //-- "Set application thread priority"
-      popup  174 "datファイルの生成" {
+      10719  182 "実行時に SUPPORT フォルダを作成"
+            //-- "Show Game List at start-up"
+      10733  183 "立ち上げ時にゲームリストを表示"
+            //-- "Scan ROMs at start-up (if needed)"
+      10734  184 "立ち上げ時にロムを検索（必要なら）"
+            //-- "Set application process priority"
+      popup  186 "アプリケーションの優先度を設定する" {
               //-- "High"
-        10311  175 "最高"
+        10311  187 "最高"
               //-- "Above normal"
-        10312  176 "高"
+        10312  188 "高"
               //-- "Normal"
-        10313  177 "普通"
+        10313  189 "普通"
               //-- "Below normal"
-        10314  178 "低"
+        10314  190 "低"
               //-- "Low"
-        10315  179 "最低"
+        10315  191 "最低"
       }
             //-- "Enable high resolution system timer"
-      10319  180 ""
+      10319  192 "高精度システムタイマを有効化"
+            //-- "Show Debug console (requires restart)"
+      10320  193 "デバッグコンソールを表示（要再起動）"
             //-- "Save High Scores when supported"
-      10654  182 "ハイスコアを保存(サポート時)"
+      10654  195 "ハイスコアを保存(サポート時)"
             //-- "Use alpha blend effects when supported"
-      10720  183 "Use alpha blend effects when supported"
+      10720  196 "アルファブレンドを使用(サポート時)"
             //-- "Display Gear-Shift Indicator when supported"
-      10727  184 ""
+      10727  197 ""
             //-- "AVI Writer Output size"
-      popup  185 "ユーザーインタフェースの言語" {
+      popup  198 "AVI出力解像度" {
               //-- "1x"
-        10724  186 ""
+        10724  199 ""
               //-- "2x"
-        10725  187 ""
+        10725  200 ""
               //-- "3x"
-        10726  188 ""
+        10726  201 ""
       }
             //-- "Generate dat file"
-      popup  190 "ゲームリストの言語" {
+      popup  203 "datファイル生成" {
               //-- "Generate dat (Arcade only)..."
-        10651  191 "datファイル生成(アーケードのみ)"
+        10651  204 "datファイル生成(アーケードのみ)"
               //-- "Generate dat (Megadrive only)..."
-        10653  192 "datファイル生成(メガドライブのみ)"
+        10653  205 "datファイル生成(メガドライブのみ)"
               //-- "Generate dat (PC-Engine only)..."
-        10714  193 "datファイル生成(PCエンジンのみ)"
+        10714  206 "datファイル生成(PCエンジンのみ)"
               //-- "Generate dat (TurboGrafx16 only)..."
-        10715  194 "datファイル生成(TurboGrafx16のみ)"
+        10715  207 "datファイル生成(TurboGrafx16のみ)"
               //-- "Generate dat (SuprGrafx only)..."
-        10716  195 "datファイル生成(SuprGrafxのみ)"
+        10716  208 "datファイル生成(SuprGrafxのみ)"
               //-- "Generate dat (Sega SG-1000 only)..."
-        10717  196 "Generate dat (Sega SG-1000 only)..."
+        10717  209 "datファイル生成(Sega SG-1000のみ)"
               //-- "Generate dat (ColecoVision only)..."
-        10718  197 "Generate dat (ColecoVision only)..."
+        10718  210 "datファイル生成(ColecoVisionのみ)"
               //-- "Generate dat (Master System only)..."
-        10721  198 "Generate dat (Master System only)..."
+        10721  211 "datファイル生成(Master Systemのみ)"
               //-- "Generate dat (Game Gear only)..."
-        10722  199 "Generate dat (Game Gear only)..."
+        10722  212 "datファイル生成(Game Gearのみ)"
               //-- "Generate dat (MSX 1 Games only)..."
-        10723  200 ""
+        10723  213 "datファイル生成(ColecoVisionのみ)"
+              //-- "Generate dat (ZX Spectrum Games only)..."
+        10732  214 "datファイル生成(ZX Spectrum Gamesのみ)"
+              //-- "Generate dat (NES Games only)..."
+        10735  215 "datファイル生成(NES Gamesのみ)"
+              //-- "Generate dat (FDS Games only)..."
+        10736  216 "datファイル生成(FDS Gamesのみ)"
+              //-- "Generate dat (Neo Geo Pocket Games only)..."
+        10737  217 "datファイル生成(Neo Geo Pocket Gamesのみ)"
+              //-- "Generate dat (Fairchild Channel F Games only)..."
+        10738  218 "datファイル生成(Fairchild Channel F Gamesのみ)"
               //-- "Generate all dats..."
-        10729  202 ""
+        10729  220 "全てのdatファイル生成"
       }
             //-- "Configure ROM paths..."
-      10614  204 "ロムフォルダの設定..."
+      10614  222 "ロムフォルダの設定..."
             //-- "Configure support file paths..."
-      10615  205 "その他のフォルダ設定"
+      10615  223 "その他のフォルダ設定..."
+            //-- "UI skin"
+      popup  225 "UIスキン" {
+              //-- "Select skin..."
+        10730  226 "スキンを選択する..."
+              //-- "Set skin to default"
+        10731  227 "スキンを初期設定に戻す"
+      }
             //-- "UI language"
-      popup  207 "アイコン" {
+      popup  228 "UI言語" {
               //-- "Select UI language..."
-        10307  208 "ユーザーインタフェースの言語を選択..."
+        10307  229 "ユーザーインタフェースの言語を選択..."
               //-- "Export UI translation template..."
-        10308  209 "ユーザーインタフェースの言語テンプレートを出力..."
+        10308  230 "ユーザーインタフェースの言語テンプレートを出力..."
               //-- "Reset UI default language"
-        10635  210 "ユーザーインタフェースの言語を初期設定に戻す"
+        10635  231 "ユーザーインタフェースの言語を初期設定に戻す"
               //-- "Download UI language..."
-        10309  211 ""
+        10309  232 "ユーザーインタフェースの言語をダウンロードする..."
       }
             //-- "Gamelist language"
-      popup  212 "アイコンサイズ" {
+      popup  233 "ゲームリスト言語" {
               //-- "Select gamelist language..."
-        10673  213 "ゲームリストの言語を選択..."
+        10673  234 "ゲームリストの言語を選択..."
               //-- "Export gamelist translation template..."
-        10674  214 "ゲームリストの言語テンプレートをエクスポート..."
+        10674  235 "ゲームリストの言語テンプレートをエクスポート..."
               //-- "Reset gamelist default language"
-        10675  215 "ゲームリストの言語を初期設定に戻す"
+        10675  236 "ゲームリストの言語を初期設定に戻す"
       }
             //-- "Icons"
-      popup  217 "チート検索" {
+      popup  238 "アイコン" {
               //-- "Enable driver icons display"
-        10676  218 "ゲームリストのアイコン表示を有効化"
+        10676  239 "ゲームリストのアイコン表示を有効化"
               //-- "Parents only (use if you have problems)"
-        10677  219 "16 x 16 ピクセル"
+        10677  240 "親ファイルのみ（問題がある場合に使用）"
               //-- "Icon size"
-        popup  220 "ヘルプ" {
+        popup  241 "アイコンサイズ" {
                 //-- "16 x 16 pixels"
-          10678  221 "24 x 24 ピクセル"
+          10678  242 "16 x 16 ピクセル"
                 //-- "24 x 24 pixels"
-          10679  222 "32 x 32 ピクセル"
+          10679  243 "24 x 24 ピクセル"
                 //-- "32 x 32 pixels"
-          10680  223 ""
+          10680  244 "32 x 32 ピクセル"
         }
               //-- "Save snapshot"
-        10318  225 "スナップショットの保存"
+        10318  246 "スナップショットの保存"
               //-- "Shot factory.."
-        10317  226 "スナップショットの設定"
+        10317  247 "スナップショットの設定"
               //-- "Enable cheats..."
-        10306  228 "チートの有効化..."
+        10306  249 "チートの有効化..."
               //-- "Cheat search"
-        popup  229 "Help" {
+        popup  250 "チートの検索" {
                 //-- "Start New Search"
-          10628  230 "新規検索"
+          10628  251 "新規検索"
                 //-- "Target value has not changed"
-          10629  232 "変更されていない対象の値"
+          10629  253 変更されていない対象の値""
                 //-- "Target value has changed"
-          10630  233 "変更された対象の値"
+          10630  254 "変更された対象の値"
                 //-- "Target value has decreased"
-          10631  234 "減少した対象の値"
+          10631  255 "減少した対象の値"
                 //-- "Target value has increased"
-          10632  235 "増加した対象の値"
+          10632  256 "増加した対象の値"
                 //-- "Dump search to file"
-          10633  237 "ファイルにダンプする"
+          10633  258 "ファイルにダンプする"
                 //-- "Exit Cheat Search"
-          10634  239 "チート検索の終了"
+          10634  260 "チート検索の終了"
         }
               //-- "Invoke 68K debugger..."
-        10392  241 "68Kデバッガの起動..."
+        10392  262 "68Kデバッガの起動..."
               //-- "Palette Viewer..."
-        10672  243 "パレット表示"
+        10672  264 "パレット表示"
               //-- "Associate with .fs and .fr files"
-        10330  245 ".fsと.frを関連付けする"
+        10330  266 ".fsと.frを関連付けする"
               //-- "Disassociate from .fs and .fr files"
-        10331  246 ".fsと.frの関連付けを解除する"
+        10331  267 ".fsと.frの関連付けを解除する"
               //-- "Save input mapping now"
-        10332  248 "キー設定を保存"
+        10332  269 "キー設定を保存"
               //-- "Auto-save input mapping"
-        10333  249 "キー設定を自動保存する"
+        10333  270 "キー設定を自動保存する"
               //-- "Save settings to .ini now"
-        10334  251 ".iniファイルに設定を保存"
+        10334  272 ".iniファイルに設定を保存"
               //-- "Reload settings from .ini"
-        10335  252 ".iniファイルから設定を読み込む"
+        10335  273 ".iniファイルから設定を読み込む"
       }
             //-- "Help"
-      popup  253 "" {
+      popup  274 "ヘルプ" {
               //-- "&Help"
-        10503  254 "ヘルプ(&H)"
+        10503  275 "ヘルプ(&H)"
               //-- "&What\'s New"
-        10505  256 "更新履歴(&W)"
-              //-- "&FB Alpha homepage"
-        10504  258 "FB Alphaホームページ(&F)"
+        10505  277 "更新履歴(&W)"
+              //-- "&FB Neo homepage"
+        10504  279 "FB Neoホームページ(&F)"
               //-- "&Neo-Source forums"
-        10506  259 "Neo-Sourceフォーラム(&N)"
+        10506  280 "Neo-Sourceフォーラム(&N)"
+              //-- "FB Neo &Github"
+        10507  281 "FB Neo &Github"
               //-- "&System information"
-        10502  261 "システム情報(&S)"
-              //-- "&About FB Alpha"
-        10501  262 "FB Alphaについて(&A)"
+        10502  283 "システム情報(&S)"
+              //-- "&About FB Neo"
+        10501  284 "FB Neoについて(&A)"
       }
     }
   }
@@ -902,15 +949,15 @@ menu    131 {
 
 menu    140 {
         //-- "Game Selection Menu"
-  popup    0 "" {
+  popup    0 "ゲーム選択メニュー" {
           //-- "Play"
-    11900    1 ""
+    11900    1 "ゲーム開始"
           //-- "View Game Information"
-    11901    3 ""
-          //-- "View in Progetto EMMA"
-    11902    5 ""
+    11901    3 "ゲームの情報を表示
+          //-- "View in Arcade Database"
+    11902    5 "アーケードデータベースを表示"
           //-- "Favorite"
-    11903    7 ""
+    11903    7 "お気に入り"
   }
 }
 
@@ -918,7 +965,7 @@ menu    140 {
 dialog	  51 "キー設定" {
         //-- "OK"
       2	   0 ""
-        //-- "Double-click an input to change its mapping"
+        //-- "Double-click an input to change its mapping, Check the macro to auto-fire"
   65535	   2 "キーを変更するにはダブルクリックして下さい"
         //-- "Make selection in all three drop-down boxes, click apropriate button"
   65535	   5 "3つのドロップダウンボックスを全て選択し、適したボタンをクリックして下さい"
@@ -928,18 +975,28 @@ dialog	  51 "キー設定" {
   20006	  10 "初期設定に戻す"
         //-- "Use preset"
   20005	  11 "プリセットを使用"
+        //-- "Analog Sensitivity"
+  65535	  12 "アナログ感度"
+        //-- "Analog Sensitivity"
+  20022	  13 "アナログ感度"
+        //-- "%"
+  65535	  15 ""
 }
 
         //-- "Select control"
 dialog	  52 "キー選択" {
         //-- "Grab mouse"
   20007	   0 "マウスを検出"
+        //-- "Map Digital"
+  20026	   1 "デジタルを選択"
         //-- "Activate"
-  20011	   1 "動作テスト"
+  20011	   2 "動作テスト"
         //-- "Clear Input"
-      3	   2 "キャンセル"
+      3	   3 "入力を消去"
         //-- "Clear Lock"
-  20021	   3 "Clear Lock"
+  20021	   4 "ロック解除"
+        //-- "Speed: "
+  20028	   9 "スピード： "
 }
 
         //-- "Edit cheat settings"
@@ -975,14 +1032,16 @@ dialog	  55 "ディップスイッチ設定の編集" {
         //-- ""
 dialog	  56 "" {
         //-- "Progress1"
-  20015	   1 ""
+     77	   1 ""
         //-- "Cancel"
       2	   5 "キャンセル"
 }
 
         //-- ""
 dialog	  57 "" {
-        //-- "FB Alpha contains parts of MAME && Final Burn.\nｩ 2004-2018, Team FB Alpha."
+        //-- "version"
+     83	   1 "バージョン"
+        //-- "FB Neo contains parts of MAME && Final Burn.\nc 2004-2020, Team FBNeo."
   65535	   3 ""
         //-- "OK"
       1	   4 ""
@@ -992,6 +1051,8 @@ dialog	  57 "" {
 
         //-- ""
 dialog	  58 "" {
+        //-- "version"
+     83	   1 "バージョン"
         //-- "OK"
       1	   4 ""
         //-- " I understand and agree to be bound by the terms of the above license agreement"
@@ -1062,13 +1123,13 @@ dialog	  61 "ゲームの選択" {
   20304	   3 "タイトル"
         //-- "Select Game"
   20302	   8 "ゲーム一覧"
-        //-- "Game info:"
-  20065	  10 "選択した色："
-        //-- "ROM name:"
+        //-- "Game:"
+  20065	  10 "ゲーム名："
+        //-- "ROM:"
   20063	  11 "ロム名："
-        //-- "ROM info:"
+        //-- "Info:"
   20064	  12 "ロム情報："
-        //-- "Released by:"
+        //-- "Released:"
   20067	  13 "リリース："
         //-- "Genre:"
   20066	  14 "ジャンル："
@@ -1093,7 +1154,7 @@ dialog	  61 "ゲームの選択" {
         //-- "ROMs Dirs..."
   20600	  31 "ロムフォルダ..."
         //-- "Scan ROMs"
-  20601	  32 "ロムをスキャン"
+  20601	  32 "ロムを検索"
         //-- "Cancel"
       2	  33 "キャンセル"
         //-- "Play"
@@ -1117,7 +1178,7 @@ dialog	  62 "スナップショットの設定" {
         //-- "&Advance Frame"
   20062	   2 "フレームを進める(&A)"
         //-- "Layer &1"
-  20202	   3 "全スプライト"
+  20202	   3 "レイヤー&1"
         //-- "Layer &2"
   20203	   4 "レイヤー&2"
         //-- "Layer &3"
@@ -1125,7 +1186,7 @@ dialog	  62 "スナップショットの設定" {
         //-- "Layer &4"
   20205	   6 "レイヤー&4"
         //-- "Show"
-  20206	   7 "対象"
+  20206	   7 "表示"
         //-- "Sprite Priority 1"
   20077	   8 "スプライト1"
         //-- "Sprite Priority 2"
@@ -1175,7 +1236,7 @@ dialog	  65 "スキャンライン輝度の選択" {
 }
 
         //-- "Select desired feedback intensity"
-dialog	  66 "フィードバック輝度の選択" {
+dialog	  66 "フィードバック強度の選択" {
         //-- "OK"
       1	   0 ""
         //-- "Feedback strength"
@@ -1210,16 +1271,16 @@ dialog	  68 "エミュレートされたCPU速度の調節" {
       2	   5 "キャンセル"
 }
 
-        //-- "FB Alpha system information report"
-dialog	  69 "FB Alpha システム情報" {
+        //-- "FB Neo system information report"
+dialog	  69 "FB Neo システム情報" {
         //-- "OK"
       1	   0 ""
         //-- "Save..."
-  20138	   1 "Save..."
+  20138	   1 "保存..."
 }
 
-        //-- "FB Alpha has encountered an unrecoverable problem and will be terminated"
-dialog	  70 "FB Alphaは回復不能な問題が発生したため終了します" {
+        //-- "FB Neo has encountered an unrecoverable problem and will be terminated"
+dialog	  70 "FB Neoは回復不能な問題が発生したため終了します" {
         //-- "OK"
       1	   1 ""
         //-- "Debug"
@@ -1230,8 +1291,8 @@ dialog	  70 "FB Alphaは回復不能な問題が発生したため終了します" {
   20104	   4 "ログ"
 }
 
-        //-- "FB Alpha debugger"
-dialog	  71 "FB Alphaデバッガ" {
+        //-- "FB Neo debugger"
+dialog	  71 "FB Neoデバッガ" {
         //-- "Disassembly"
   65535	   3 "逆アセンブル"
         //-- "Internal CPU state"
@@ -1258,8 +1319,8 @@ dialog	  71 "FB Alphaデバッガ" {
   20119	  28 "スクリーンショット"
 }
 
-        //-- "FB Alpha debugger"
-dialog	  72 "FB Alphaデバッガ" {
+        //-- "FB Neo debugger"
+dialog	  72 "FB Neoデバッガ" {
         //-- "Execute"
       1	  10 "実行"
         //-- "Exit"
@@ -1278,8 +1339,8 @@ dialog	  72 "FB Alphaデバッガ" {
   20119	  18 "スクリーンショット"
 }
 
-        //-- "FB Alpha message"
-dialog	  73 "FB Alphaメッセージ" {
+        //-- "FB Neo message"
+dialog	  73 "FB Neoメッセージ" {
         //-- "OK"
       1	   0 ""
 }
@@ -1293,51 +1354,53 @@ dialog	  74 "その他のフォルダ設定" {
         //-- "Cancel"
       2	   2 "キャンセル"
         //-- "Browse..."
-  20950	   5 "Browse..."
+  20950	   5 "参照..."
         //-- "Browse..."
-  20951	   7 "Browse..."
+  20951	   7 "参照..."
         //-- "Browse..."
-  20952	   9 "Browse..."
+  20952	   9 "参照..."
         //-- "Browse..."
-  20953	  11 "Browse..."
+  20953	  11 "参照..."
         //-- "Browse..."
-  20954	  13 "Browse..."
+  20954	  13 "参照..."
         //-- "Browse..."
-  20955	  15 "Browse..."
+  20955	  15 "参照..."
         //-- "Browse..."
-  20956	  17 "Browse..."
+  20956	  17 "参照..."
         //-- "Browse..."
-  20957	  19 "Browse..."
+  20957	  19 "参照..."
         //-- "Browse..."
-  20958	  21 "Browse..."
+  20958	  21 "参照..."
         //-- "Browse..."
-  20959	  23 "Browse..."
+  20959	  23 "参照..."
         //-- "Browse..."
-  20960	  25 "Browse..."
+  20960	  25 "参照..."
         //-- "Browse..."
-  20961	  27 "Browse..."
+  20961	  27 "参照..."
         //-- "Browse..."
-  20962	  29 "Browse..."
+  20962	  29 "参照..."
         //-- "Browse..."
-  20963	  31 "Browse..."
+  20963	  31 "参照..."
         //-- "Browse..."
-  20964	  33 "Browse..."
+  20964	  33 "参照..."
         //-- "Browse..."
-  20965	  35 "Browse..."
+  20965	  35 "参照..."
         //-- "Browse..."
-  20966	  37 "Browse..."
+  20966	  37 "参照..."
         //-- "Browse..."
-  20967	  39 "Browse..."
+  20967	  39 "参照..."
         //-- "Browse..."
-  20968	  41 "Browse..."
+  20968	  41 "参照..."
         //-- "Browse..."
-  20969	  43 "Browse..."
+  20969	  43 "参照..."
         //-- "Browse..."
-  20970	  45 "Browse..."
+  20970	  45 "参照..."
         //-- "Browse..."
-  20971	  47 "Browse..."
+  20971	  47 "参照..."
         //-- "Browse..."
-  20972	  49 ""
+  20972	  49 "参照..."
+        //-- "Browse..."
+  20973	  51 "参照..."
 }
 
         //-- "Palette Viewer"
@@ -1375,7 +1438,7 @@ dialog	  75 "パレット表示" {
         //-- "F"
   20415	  31 ""
         //-- "Selected colour: "
-  20434	  32 "Selected colour: "
+  20434	  32 "選択色： "
         //-- "Close"
       2	  33 "閉じる"
         //-- "Previous..."
@@ -1395,7 +1458,7 @@ dialog	  77 "IPSパッチマネージャー" {
 }
 
         //-- "Select cartridges to load..."
-dialog	  78 "読み込むカートリッジの選択" {
+dialog	  78 "読み込むカートリッジの選択..." {
         //-- "OK"
       1	   1 ""
         //-- "Cancel"
@@ -1403,37 +1466,37 @@ dialog	  78 "読み込むカートリッジの選択" {
         //-- "Slot 1"
   20736	   4 "スロット1"
         //-- "Clear"
-  20730	   8 "クリア"
+  20730	   8 "消去"
         //-- "Select..."
   20724	   9 "選択..."
         //-- "Slot 2"
   20737	  11 "スロット2"
         //-- "Clear"
-  20731	  15 "クリア"
+  20731	  15 "消去"
         //-- "Select..."
   20725	  16 "選択..."
         //-- "Slot 3"
   20738	  18 "スロット3"
         //-- "Clear"
-  20732	  22 "クリア"
+  20732	  22 "消去"
         //-- "Select..."
   20726	  23 "選択..."
         //-- "Slot 4"
   20739	  25 "スロット4"
         //-- "Clear"
-  20733	  29 "クリア"
+  20733	  29 "消去"
         //-- "Select..."
   20727	  30 "選択..."
         //-- "Slot 5"
   20740	  32 "スロット5"
         //-- "Clear"
-  20734	  36 "クリア"
+  20734	  36 "消去"
         //-- "Select..."
   20728	  37 "選択..."
         //-- "Slot 6"
   20741	  39 "スロット6"
         //-- "Clear"
-  20735	  43 "クリア"
+  20735	  43 "消去"
         //-- "Select..."
   20729	  44 "選択..."
 }
@@ -1450,10 +1513,10 @@ dialog	  79 "ネオジオCDZゲーム一覧" {
   20812	   4 "フォルダ..."
         //-- "Scan sub-dirs"
   20809	   5 "サブフォルダスキャン"
-        //-- "Front Cover"
-  65535	   6 "前面カバー"
-        //-- "Back Cover"
-  65535	   7 "裏面カバー"
+        //-- "CD Cover"
+  65535	   6 "CDカバー"
+        //-- "Game Preview"
+  65535	   7 "ゲーム画面"
         //-- "Options"
   65535	   9 "オプション"
         //-- "Short name:"
@@ -1464,40 +1527,38 @@ dialog	  79 "ネオジオCDZゲーム一覧" {
   20818	  16 "ディスク："
         //-- "Audio Tracks:"
   20819	  17 "オーディオ："
-        //-- "Scan for ISO only"
-  20810	  22 "ISOのみスキャン"
 }
 
         //-- "Game Information"
-dialog	  81 "Game Information" {
+dialog	  81 "ゲーム情報" {
         //-- "Tab1"
   20500	   0 ""
-        //-- "Game info:"
-  20065	   2 "選択した色："
-        //-- "ROM name:"
+        //-- "Game:"
+  20065	   2 "ゲーム名："
+        //-- "ROM:"
   20063	   3 "ロム名："
-        //-- "ROM info:"
+        //-- "Info:"
   20064	   4 "ロム情報："
-        //-- "Released by:"
+        //-- "Released:"
   20067	   5 "リリース："
         //-- "Genre:"
   20066	   6 "ジャンル："
         //-- "Notes:"
   20124	   7 "備考："
         //-- "Favorite"
-  20604	  19 ""
+  20604	  20 "お気に入り"
         //-- "Rescan Romset"
-  20603	  20 "Rescan Romset"
+  20603	  21 "ロムを再検索"
         //-- "Close"
-      2	  21 "Close"
+      2	  22 "閉じる"
 }
 
         //-- "Download Localisation Template"
 dialog	  82 "" {
         //-- "Language:"
-  20139	   1 ""
+  20139	   1 "言語："
         //-- "Cancel"
-      2	   3 ""
+      2	   3 "キャンセル"
         //-- "OK"
       1	   4 ""
 }
@@ -1511,7 +1572,7 @@ dialog	  83 "" {
         //-- "Vertical Games:"
   20143	   4 ""
         //-- "Cancel"
-      2	   6 ""
+      2	   6 "キャンセル"
         //-- "OK"
       1	   7 ""
 }
@@ -1521,17 +1582,17 @@ dialog	 233 "" {
         //-- "OK"
       1	   0 ""
         //-- "Cancel"
-      2	   4 ""
+      2	   4 "キャンセル"
         //-- "00:00:00"
-  20255	  10 ""
+  20255	  11 ""
         //-- "0"
-  20256	  11 ""
+  20256	  12 ""
         //-- "0"
-  20257	  12 ""
+  20257	  13 ""
         //-- "Open Read-Only"
-  20259	  15 ""
+  20259	  17 ""
         //-- "Show Joystick Movement"
-  20263	  16 ""
+  20264	  18 ""
 }
 
         //-- "Record input"
@@ -1539,7 +1600,7 @@ dialog	 234 "" {
         //-- "OK"
       1	   0 ""
         //-- "Cancel"
-      2	   3 ""
+      2	   3 "キャンセル"
         //-- "..."
   20261	   6 ""
         //-- "Record From Power-On"
@@ -1802,73 +1863,76 @@ string   626 ""
 string   628 ""
 
         //-- "Previews"
-string   630 "Previews"
+string   630 ""
 
         //-- "Titles"
-string   632 "Titles"
+string   632 "タイトル"
 
         //-- "Icons"
-string   634 "Icons"
+string   634 "アイコン"
 
         //-- "Cheats"
-string   636 "Cheats"
+string   636 "チート"
 
         //-- "High Scores"
-string   638 "High Scores"
+string   638 "最高得点"
 
         //-- "Samples"
-string   640 "Samples"
+string   640 ""
 
         //-- "IPS"
-string   642 "IPS"
+string   642 ""
 
         //-- "Neo Geo CDZ Games"
-string   644 "Neo Geo CDZ Games"
+string   644 ""
 
         //-- "Neo Geo CDZ Covers"
-string   646 "Neo Geo CDZ Covers"
+string   646 ""
 
         //-- "Blend Files"
-string   648 "Blend Files"
+string   648 ""
 
         //-- "Select Previews"
-string   650 "プレビュー"
+string   650 "選択画面"
 
         //-- "Versus Previews"
-string   652 "タイトル"
+string   652 "対戦画面"
 
         //-- "HowTo Previews"
-string   654 "アイコン"
+string   654 "操作説明画面"
 
         //-- "Scores Previews"
-string   656 "チート"
+string   656 "得点画面"
 
         //-- "Bosses Previews"
-string   658 "ハイスコア"
+string   658 "ボス画面"
 
         //-- "Game Over Previews"
-string   660 "サンプル"
+string   660 "ゲームオーバー画面"
 
         //-- "Flyers"
 string   662 ""
 
         //-- "Marquees"
-string   664 "ネオジオCDZゲーム"
+string   664 ""
 
         //-- "Control Panels"
-string   666 "ネオジオCDZカバー"
+string   666 ""
 
         //-- "Cabinets"
-string   668 "Cabinets"
+string   668 ""
 
         //-- "PCBs"
-string   670 "PCBs"
+string   670 ""
 
         //-- "History.dat"
-string   672 "History.dat"
+string   672 ""
 
         //-- "EEPROM Saves"
 string   674 ""
+
+        //-- "HDD Images"
+string   676 ""
 
         //-- "Path #1"
 string   680 "フォルダ #1"
@@ -1957,8 +2021,14 @@ string   750 "言語テンプレートの作成"
         //-- "Select localisation template"
 string   752 "言語テンプレートの選択"
 
-        //-- "FB Alpha localisation templates"
-string   754 "FB Alpha 言語テンプレート"
+        //-- "FB Neo localisation templates"
+string   754 "FB Neo 言語テンプレート"
+
+        //-- "Neo Geo Pocket"
+string   756 "ネオジオポケット"
+
+        //-- "Fairchild Channel F"
+string   758 ""
 
         //-- "Filters"
 string   760 "フィルタ"
@@ -1987,8 +2057,8 @@ string   774 ""
         //-- "Psikyo"
 string   776 "彩京"
 
-        //-- "Sega"
-string   778 "セガ"
+        //-- "Sega Arcade"
+string   778 "セガ業務用"
 
         //-- "Taito"
 string   780 "タイトー"
@@ -1996,10 +2066,10 @@ string   780 "タイトー"
         //-- "Toaplan"
 string   782 "東亜プラン"
 
-        //-- "Misc (pre 90s)"
+        //-- "Misc (Pre-90s)"
 string   784 "その他(90年以前)"
 
-        //-- "Misc (post 90s)"
+        //-- "Misc (Post-90s)"
 string   786 "その他(90年以後)"
 
         //-- "Megadrive"
@@ -2072,24 +2142,42 @@ string   830 "SG-1000"
 string   832 "ColecoVision"
 
         //-- "Game Gear"
-string   834 "Game Gear"
+string   834 "ゲームギア"
 
         //-- "MSX"
 string   836 ""
 
+        //-- "ZX Spectrum"
+string   838 ""
+
+        //-- "Midway"
+string   840 ""
+
+        //-- "Capcom"
+string   842 "カプコン"
+
+        //-- "Sega"
+string   844 "セガ"
+
+        //-- "NES"
+string   846 "ファミコン"
+
+        //-- "FDS"
+string   848 "ディスクシステム"
+
         //-- "Genre"
 string   850 "ジャンル"
 
-        //-- "Shooter - Horizontal"
+        //-- "Shooter / Horizontal / Sh\'mup"
 string   852 "横シューティング"
 
-        //-- "Shooter - Vertical"
+        //-- "Shooter / Vertical / Sh\'mup"
 string   854 "縦シューティング"
 
-        //-- "Fighter - Scrolling"
+        //-- "Fighting / Beat \'em Up"
 string   856 "スクロール型格闘"
 
-        //-- "Fighter - Versus"
+        //-- "Fighting / Versus"
 string   858 "対戦型格闘"
 
         //-- "BIOS"
@@ -2113,8 +2201,8 @@ string   870 "ミニゲーム"
         //-- "Pinball"
 string   872 "ピンボール"
 
-        //-- "Platform"
-string   874 "アクション"
+        //-- "Platformer"
+string   874 ""
 
         //-- "Puzzle"
 string   876 "パズル"
@@ -2122,10 +2210,10 @@ string   876 "パズル"
         //-- "Quiz"
 string   878 "クイズ"
 
-        //-- "Sports - Misc"
+        //-- "Sports"
 string   880 "スポーツ"
 
-        //-- "Sports - Football"
+        //-- "Sports / Football"
 string   882 "サッカー"
 
         //-- "Misc"
@@ -2137,8 +2225,26 @@ string   886 "麻雀"
         //-- "Racing"
 string   888 "レース"
 
-        //-- "Shooter - Other"
-string   890 "その他シューティング"
+        //-- "Shooter"
+string   890 "シューティング"
+
+        //-- "Run \'n Gun (Shooter)"
+string   892 ""
+
+        //-- "Strategy"
+string   894 "戦略"
+
+        //-- "Action (Classic)"
+string   896 "アクション（古典的）"
+
+        //-- "RPG"
+string   898 ""
+
+        //-- "Simulator"
+string   900 "シミュレータ"
+
+        //-- "Adventure"
+string   902 "冒険"
 
         //-- "Family"
 string   940 "シリーズ"
@@ -2149,7 +2255,7 @@ string   942 "メタルスラッグ"
         //-- "Street Fighter"
 string   944 "ストリートファイター"
 
-        //-- "King of Fighters"
+        //-- "The King of Fighters"
 string   946 "キングオブファイターズ"
 
         //-- "Darkstalkers"
@@ -2165,7 +2271,7 @@ string   952 "サムライスピリッツ"
 string   954 ""
 
         //-- "Aero Fighters"
-string   956 "ソニックウィングス"
+string   956 ""
 
         //-- "Power Instinct"
 string   958 "豪血寺一族"
@@ -2173,8 +2279,17 @@ string   958 "豪血寺一族"
         //-- "Other"
 string   960 "その他"
 
+        //-- "Sonic the Hedgehog"
+string   962 "ソニック"
+
+        //-- "DonPachi"
+string   964 "首領蜂"
+
+        //-- "Mahou Daisakusen"
+string   966 "魔法大作戦"
+
         //-- "Favorites"
-string   990 ""
+string   990 "お気に入り"
 
         //-- "IPS Patch Manager"
 string  1000 "IPSパッチマネージャー"
@@ -2216,7 +2331,7 @@ string  1070 "フレーム数"
 string  1072 "シャープネスフィルタを選択"
 
         //-- "Scanning ROMs..."
-string  1076 "ロムをスキャン中..."
+string  1076 "ロムを検索中..."
 
         //-- "New cheat search started"
 string  1080 "新規チート検索を開始"
@@ -2267,57 +2382,63 @@ string  1120 "ポーランド語"
 string  1122 "ハンガリー語"
 
         //-- "Game Information"
-string  1200 "Game Information"
+string  1200 "ゲーム情報"
 
         //-- "In Game"
-string  1202 "In Game"
+string  1202 ""
 
         //-- "Title"
-string  1204 "Title"
+string  1204 "タイトル"
 
         //-- "Select"
-string  1206 "Select"
+string  1206 "選択"
 
         //-- "Versus"
-string  1208 "Versus"
+string  1208 "対戦"
 
         //-- "How To"
-string  1210 "How To"
+string  1210 ""
 
         //-- "Scores"
-string  1212 "Scores"
+string  1212 "得点"
 
         //-- "Bosses"
-string  1214 "Bosses"
+string  1214 ""
 
         //-- "Game Over"
-string  1216 "Game Over"
+string  1216 ""
 
         //-- "Flyer"
-string  1218 "Flyer"
+string  1218 ""
 
         //-- "Cabinet"
-string  1220 "Cabinet"
+string  1220 ""
 
         //-- "Marquee"
-string  1222 "Marquee"
+string  1222 ""
 
         //-- "Controls"
-string  1224 "Controls"
+string  1224 ""
 
         //-- "PCB"
-string  1226 "PCB"
+string  1226 "基板"
 
         //-- "Rom Info"
-string  1228 "Rom Info"
+string  1228 "ロム情報"
 
         //-- "History"
-string  1230 "History"
+string  1230 ""
 
         //-- "Sample Info"
-string  1232 "Sample Info"
+string  1232 ""
 
-        //-- " (clone of %s"
+        //-- "HDD Info"
+string  1234 ""
+
+        //-- "Select Skin"
+string  1400 ""
+
+        //-- " (Clone of %s"
 string  1600 " (%sのクローン"
 
         //-- ", uses ROMs from %s"
@@ -2326,35 +2447,35 @@ string  1602 ", %sからロムを使用"
         //-- "%suses ROMs from %s"
 string  1604 "%s%sからロムを使用"
 
-        //-- "%suses board-ROMs from %s"
+        //-- "%suses Board-ROMs from %s"
 string  1606 "%s%sから基盤ロムを使用"
 
         //-- "%suses samples from %s"
 string  1608 "%s%sからサンプルを使用"
 
-        //-- "%s%i player%s"
+        //-- "%s%i Player%s"
 string  1610 "%s%i人プレイ%s"
 
-        //-- "s max"
+        //-- "s Max"
 string  1612 "(最大)"
 
-        //-- "%s (%s, %s hardware)"
+        //-- "%s (%s, %s Hardware)"
 string  1614 "%s (%s, %s ハードウェア)"
 
         //-- "Neo Geo MVS Cartidge"
 string  1616 "ネオジオMVSカートリッジ"
 
-        //-- "%shigh scores supported"
+        //-- "%sHigh Scores Supported"
 string  1618 "%sハイスコアをサポート"
 
-        //-- "cartridge"
+        //-- "Cartridge"
 string  1620 "カートリッジ"
 
-        //-- "hardware"
+        //-- "Hardware"
 string  1622 "ハードウェア"
 
         //-- "Empty"
-string  1624 ""
+string  1624 "空"
 
         //-- "Unidentified CD"
 string  1626 "不明なCD"
@@ -2372,7 +2493,7 @@ string  1804 "情報"
 string  1806 "不明"
 
         //-- "The ROMset is OK."
-string  1810 "このロムセットはOKです。"
+string  1810 "このロムセットは正常です。"
 
         //-- "The ROMset exhibits the following problems:"
 string  1812 "このロムセットには以下の問題があります："
@@ -2437,6 +2558,9 @@ string  1850 "%.512sから%.32hsを読み取る際にエラー"
         //-- "CRC mismatch reading %.32hs from %.512s"
 string  1852 "%.512sから%.32hsを読み取る際にCRC不一致"
 
+        //-- "No HDD data was found, the game will not run!"
+string  1854 "HDDデータが見つからないためゲームを実行できません！"
+
         //-- "There was a problem starting \'%.128s\'.\n"
 string  1860 "\'%.128s\'を開始するには問題があります。\n"
 
@@ -2465,7 +2589,7 @@ string  1882 "\n\nこれは標準のVGA解像度ではありません。 あなたのビデオカードでサ
 string  1884 ""
 
         //-- "Error creating "
-string  1890 "チートエラー"
+string  1890 "作成エラー"
 
         //-- "Error loading "
 string  1892 "読み込みエラー"
@@ -2494,9 +2618,12 @@ string  1916 "このゲームは動作しません。読み込みますか？"
         //-- "Couldn\'t initialise CD emulation."
 string  1918 "CDエミュレーションを初期化できません。"
 
-        //-- "Failed to connect to Internet"
-string  1950 ""
+        //-- "Double-click the macro to change its mapping first"
+string  1930 ""
 
-        //-- "Failed to access FB Alpha website"
-string  1952 ""
+        //-- "Failed to connect to Internet"
+string  1950 "インターネットの接続に失敗しました。"
+
+        //-- "Failed to access FB Neo website"
+string  1952 "FB Neo のウェブサイトの接続に失敗しました。"
 
